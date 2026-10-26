@@ -1,0 +1,8 @@
+# Nunca subir a GitHub:
+node_modules/
+.env
+*.log
+# Las copias de seguridad tienen datos personales de clientas
+copias/
+# Fotos de trabajos de clientas (solo en el computador de Alejandra, sin permiso de publicarlas)
+db/semilla/

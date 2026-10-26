@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf7">
+  <title>Queens Be Alejandra | Nail Salon en San Rafael</title>
+  <meta name="description" content="Queens Be Alejandra Nail Salon: manicura, acrílicas, polygel, soft gel y diseños. Reserva tu cita por WhatsApp.">
+  <link rel="icon" href="imagen.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500..700&family=Great+Vibes&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="header" id="header">
+    <div class="wrap header__in">
+      <a class="brand" href="#inicio" aria-label="Queens Be Alejandra, inicio">
+        <img src="imagen.jpeg" alt="" width="56" height="56">
+        <span>Queens Be Alejandra</span>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menú</button>
+      <nav id="nav" class="nav" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#proceso">Cómo reservar</a>
+        <a href="#contacto">Contacto</a>
+        <a class="btn btn--sm" href="#reservar">Reservar cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <span class="spark spark--b1" aria-hidden="true"></span>
+      <span class="spark spark--b2" aria-hidden="true"></span>
+      <div class="wrap hero__in">
+        <div class="hero__text">
+          <h1>Uñas de reina, hechas con cuidado</h1>
+          <p>Manicura, extensiones y diseños a tu estilo. Alejandra te atiende personalmente en San Rafael. Elige tu servicio, propón un horario y ella confirma tu cita.</p>
+          <div class="actions">
+            <a class="btn" href="#reservar">Reservar cita</a>
+            <a class="btn btn--ghost" href="#servicios">Ver precios</a>
+          </div>
+        </div>
+        <div class="hero__logo">
+          <span class="spark spark--1" aria-hidden="true"></span>
+          <span class="spark spark--2" aria-hidden="true"></span>
+          <span class="spark spark--3" aria-hidden="true"></span>
+          <img src="imagen.jpeg" alt="Logo de Queens Be Alejandra Nail Salon: corona dorada con gemas rosadas" width="520" height="520">
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="servicios">
+      <div class="wrap">
+        <h2>Servicios y precios</h2>
+        <p class="lead">Los precios pueden variar según el largo o el modelo de la uña. Si quieres también los pies, súmale $ 35.000 al servicio.</p>
+        <div class="services">
+          <article class="service">
+            <h3>Manicura y esmaltado</h3>
+            <ul class="prices">
+              <li><span>Manicura tradicional</span><b>$ 16.000</b></li>
+              <li><span>Semipermanente</span><b>$ 35.000</b></li>
+            </ul>
+          </article>
+          <article class="service">
+            <h3>Extensiones</h3>
+            <ul class="prices">
+              <li><span>Uñas acrílicas</span><b>$ 80.000</b></li>
+              <li><span>Polygel</span><b>$ 75.000</b></li>
+              <li><span>Soft Gel</span><b>$ 70.000</b></li>
+            </ul>
+          </article>
+          <article class="service">
+            <h3>Recubrimientos</h3>
+            <ul class="prices">
+              <li><span>Recubrimiento</span><b>$ 60.000</b></li>
+              <li><span>Recubrimiento en gel</span><b>$ 40.000</b></li>
+              <li><span>Dipiin</span><b>$ 50.000</b></li>
+            </ul>
+          </article>
+          <article class="service">
+            <h3>Decoración y extras</h3>
+            <ul class="prices">
+              <li><span>Figuras en relieve</span><b>$ 5.000</b></li>
+              <li><span>Caricaturas</span><b>$ 5.000</b></li>
+              <li><span>Piedras o moños</span><b>$ 2.000</b></li>
+              <li><span>Estructuras después del #2</span><b>desde $ 15.000</b></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeria">
+      <div class="wrap">
+        <h2>Galería de diseños</h2>
+        <p class="lead">Algunos trabajos de Alejandra. Toca una foto para verla en grande.</p>
+        <ul class="gallery" id="galeriaLista"></ul>
+        <p class="gallery__vacia" id="galeriaVacia" hidden>Pronto verás aquí los trabajos de Alejandra.</p>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="proceso">
+      <div class="wrap">
+        <h2>Cómo reservar</h2>
+        <ol class="steps">
+          <li><h3>Elige tu servicio</h3><p>Selecciona lo que quieres hacerte.</p></li>
+          <li><h3>Propón fecha y hora</h3><p>Indica el día y horario que te convienen.</p></li>
+          <li><h3>Envía tu solicitud</h3><p>Tu solicitud se guarda y la hora queda apartada para ti.</p></li>
+          <li><h3>Recibe la confirmación</h3><p>Alejandra revisa su agenda y te confirma. La cita no es definitiva hasta entonces.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="reservar">
+      <div class="wrap form-wrap">
+        <div>
+          <h2>Solicita tu cita</h2>
+          <p class="lead">Tu solicitud queda pendiente hasta que Alejandra la confirme.</p>
+          <p class="note">Al enviar, la hora queda apartada y nadie más puede tomarla. Alejandra revisa su agenda y te confirma por WhatsApp.</p>
+        </div>
+
+        <form id="bookingForm" novalidate>
+          <div id="formBody">
+            <fieldset class="group">
+              <legend><span class="n">1</span>Elige tu servicio</legend>
+              <div class="field">
+                <label for="servicio" class="sr">Servicio</label>
+                <select id="servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option>Manicura tradicional</option>
+                  <option>Semipermanente</option>
+                  <option>Uñas acrílicas</option>
+                  <option>Polygel</option>
+                  <option>Soft Gel</option>
+                  <option>Recubrimiento</option>
+                  <option>Recubrimiento en gel</option>
+                  <option>Dipiin</option>
+                  <option>Otro / diseño (lo converso por WhatsApp)</option>
+                </select>
+                <p class="error" id="err-servicio" hidden>Elige un servicio.</p>
+              </div>
+              <div class="field">
+                <p class="label" id="alcanceLabel">¿Para qué zona?</p>
+                <div class="slots slots--2" role="radiogroup" aria-labelledby="alcanceLabel">
+                  <label class="slot"><input type="radio" name="alcance" value="manos" checked><span>Solo manos</span></label>
+                  <label class="slot"><input type="radio" name="alcance" value="manos y pies"><span>Manos y pies</span></label>
+                </div>
+              </div>
+              <div class="field field--foto" id="campoFotoManos">
+                <label for="fotoManos" id="fotoManosTit">Foto de referencia de las manos (opcional)</label>
+                <input type="file" id="fotoManos" accept="image/*" aria-describedby="fotoAyuda err-fotoManos">
+                <img class="foto-previa" id="previaManos" alt="Vista previa de tu foto de manos" hidden>
+                <p class="error" id="err-fotoManos" hidden></p>
+              </div>
+              <div class="field field--foto" id="campoFotoPies" hidden>
+                <label for="fotoPies">Foto de referencia de los pies (opcional)</label>
+                <input type="file" id="fotoPies" accept="image/*" aria-describedby="fotoAyuda err-fotoPies">
+                <img class="foto-previa" id="previaPies" alt="Vista previa de tu foto de pies" hidden>
+                <p class="error" id="err-fotoPies" hidden></p>
+              </div>
+              <p class="help" id="fotoAyuda">Una foto del diseño que te gusta, para que Alejandra lo vea antes de confirmar. Solo la ve Alejandra (le llega a su Telegram) y se borra de la página 30 días después de tu cita.</p>
+            </fieldset>
+
+            <fieldset class="group">
+              <legend><span class="n">2</span>Escoge día y hora</legend>
+              <div class="field">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <p class="error" id="err-fecha" hidden>Elige una fecha.</p>
+              </div>
+              <div class="field">
+                <p class="label" id="horaLabel">Horas disponibles</p>
+                <div id="horas" class="slots" role="radiogroup" aria-labelledby="horaLabel">
+                  <p class="slots__msg">Elige primero la fecha.</p>
+                </div>
+                <p class="help" id="duracionAyuda"></p>
+                <p class="error" id="err-hora" hidden>Elige una hora.</p>
+              </div>
+            </fieldset>
+
+            <fieldset class="group">
+              <legend><span class="n">3</span>Tus datos</legend>
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" autocomplete="name" maxlength="60" required>
+                <p class="error" id="err-nombre" hidden>Escribe tu nombre.</p>
+              </div>
+              <div class="field">
+                <label for="telefono">Celular o WhatsApp</label>
+                <div class="input-count">
+                  <input type="tel" id="telefono" name="telefono" inputmode="numeric" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="10 dígitos, sin espacios" aria-describedby="telefonoAyuda err-telefono" required>
+                  <span class="count" id="telefonoCount" aria-hidden="true">0/10</span>
+                </div>
+                <p class="help" id="telefonoAyuda">Solo números, 10 dígitos, empieza por 3.</p>
+                <p class="error" id="err-telefono" hidden>Escribe tu celular de 10 dígitos, empezando por 3.</p>
+              </div>
+              <div class="field field--check">
+                <input type="checkbox" id="consent" name="consent" required>
+                <label for="consent">Autorizo el uso de mis datos para gestionar mi cita, según la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a> (Ley 1581 de 2012).</label>
+                <p class="error" id="err-consent" hidden>Debes aceptar para continuar.</p>
+              </div>
+            </fieldset>
+
+            <button class="btn btn--block" type="submit">Solicitar cita</button>
+            <p class="status" id="status" role="status" aria-live="polite"></p>
+          </div>
+
+          <div class="done" id="exito" hidden tabindex="-1">
+            <svg class="check" viewBox="0 0 52 52" width="76" height="76" aria-hidden="true">
+              <circle cx="26" cy="26" r="24"/>
+              <path d="M15 27l8 8 15-17"/>
+            </svg>
+            <h3>Tu solicitud quedó guardada</h3>
+            <p>La hora quedó apartada y tu cita está <strong>pendiente</strong> hasta que Alejandra la confirme. Para avisarle más rápido, toca el botón y envía el mensaje por WhatsApp (no se envía solo).</p>
+            <a class="btn" id="waBtn" href="#" target="_blank" rel="noopener noreferrer">Avisar a Alejandra por WhatsApp</a>
+            <button type="button" class="link-btn" id="volver">Hacer otra solicitud</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section section--tint" id="contacto">
+      <div class="wrap contact">
+        <div>
+          <h2>Visítanos</h2>
+          <p class="lead">Escríbenos para dudas, cambios o consultas de diseño.</p>
+        </div>
+        <ul class="contact__list">
+          <li><strong>Dirección</strong> Calle 6 # 8-02, San Rafael</li>
+          <li><strong>Horario</strong>
+            Lunes a viernes: 1:30 p. m. a 6:00 p. m.<br>
+            Sábados: 7:00 a. m. a 7:00 p. m.<br>
+            Domingos: cerrado</li>
+          <li><strong>WhatsApp</strong> <a id="waLink" href="#">+57 304 3211968</a></li>
+          <li><strong>Instagram</strong> <a href="https://www.instagram.com/q_u_e_e_n_nails_studio/" target="_blank" rel="noopener noreferrer">@q_u_e_e_n_nails_studio</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__brand">Queens Be Alejandra</p>
+      <p>© <span id="year">2026</span> Queens Be Alejandra Nail Salon. Todos los derechos reservados. <a href="privacidad.html">Política de privacidad</a></p>
+    </div>
+  </footer>
+
+  <dialog class="visor" id="visor" aria-label="Foto ampliada">
+    <figure class="visor__fig">
+      <img id="visorImg" alt="">
+      <figcaption id="visorTxt"></figcaption>
+    </figure>
+    <button type="button" class="visor__btn visor__cerrar" id="visorCerrar" aria-label="Cerrar">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <button type="button" class="visor__btn visor__prev" id="visorPrev" aria-label="Foto anterior">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button type="button" class="visor__btn visor__next" id="visorNext" aria-label="Foto siguiente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

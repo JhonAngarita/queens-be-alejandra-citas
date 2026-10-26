@@ -1,0 +1,48 @@
+/* Página de política de privacidad. Usa los colores y fuentes de style.css */
+
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 16px 64px;
+}
+
+.legal__volver {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--pink-dark);
+  font-weight: 500;
+}
+
+.legal h1 {
+  font-family: var(--serif);
+  color: var(--plum);
+  font-size: clamp(1.8rem, 6vw, 2.5rem);
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.legal h2 {
+  font-family: var(--serif);
+  color: var(--plum);
+  font-size: 1.3rem;
+  margin: 32px 0 8px;
+}
+
+.legal p,
+.legal li {
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.legal ul {
+  padding-left: 22px;
+}
+
+.legal__fecha {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.legal a {
+  color: var(--pink-dark);
+}

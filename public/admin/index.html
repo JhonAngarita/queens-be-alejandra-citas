@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#302329">
+  <title>Panel · Queens Be Alejandra</title>
+  <link rel="icon" href="../imagen.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,500..700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- login -->
+  <main class="login" id="vistaLogin" hidden>
+    <form class="login__card" id="formLogin" novalidate>
+      <img class="login__logo" src="../imagen.jpeg" alt="" width="84" height="84">
+      <h1>Panel de citas</h1>
+      <p class="login__sub">Queens Be Alejandra</p>
+
+      <label for="usuario">Usuario</label>
+      <input id="usuario" name="usuario" type="text" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false" required>
+
+      <label for="clave">Clave</label>
+      <input id="clave" name="clave" type="password" autocomplete="current-password" required>
+
+      <p class="error" id="errLogin" role="alert" hidden></p>
+      <button class="btn btn--main" type="submit" id="btnLogin">Entrar</button>
+    </form>
+  </main>
+
+  <!-- panel -->
+  <div id="vistaPanel" hidden>
+    <header class="top">
+      <div>
+        <p class="top__eyebrow">Queens Be Alejandra</p>
+        <h1 class="top__title" id="titulo">Mis citas</h1>
+      </div>
+      <div class="top__actions">
+        <button type="button" class="btn btn--ghost" id="btnRefrescar">Actualizar</button>
+        <button type="button" class="btn btn--ghost" id="btnSalir">Salir</button>
+      </div>
+    </header>
+
+    <div class="nuevo" id="bannerNuevo" role="status" hidden></div>
+
+    <!-- citas -->
+    <section id="v-citas" class="vista">
+      <nav class="tabs" role="tablist" aria-label="Estado de las citas">
+        <button class="tab is-active" role="tab" aria-selected="true" data-estado="pendiente">Pendientes <span class="tab__n" id="n-pendiente">0</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-estado="confirmada">Confirmadas <span class="tab__n" id="n-confirmada">0</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-estado="cancelada">Canceladas <span class="tab__n" id="n-cancelada">0</span></button>
+        <button class="tab" role="tab" aria-selected="false" data-estado="historial">Historial</button>
+      </nav>
+      <div class="lista" id="lista" aria-live="polite"></div>
+    </section>
+
+    <!-- bloqueos -->
+    <section id="v-bloqueos" class="vista" hidden>
+      <div class="lista">
+        <form class="caja" id="formBloqueo" novalidate>
+          <h2>Bloquear horario</h2>
+          <p class="ayuda">Las clientas no podrán reservar en ese horario (vacaciones, permisos, almuerzo...).</p>
+
+          <label for="bFecha">Día</label>
+          <input type="date" id="bFecha" required>
+
+          <fieldset class="opciones">
+            <legend>¿Qué quieres bloquear?</legend>
+            <label class="opcion"><input type="radio" name="bTipo" value="dia" checked><span>Todo el día</span></label>
+            <label class="opcion"><input type="radio" name="bTipo" value="horas"><span>Algunas horas</span></label>
+          </fieldset>
+
+          <div id="bDias">
+            <label for="bHastaFecha">Hasta el día (opcional, para vacaciones)</label>
+            <input type="date" id="bHastaFecha">
+          </div>
+
+          <div id="bHoras" class="dos" hidden>
+            <div>
+              <label for="bDesde">Desde</label>
+              <select id="bDesde"></select>
+            </div>
+            <div>
+              <label for="bHasta">Hasta</label>
+              <select id="bHasta"></select>
+            </div>
+          </div>
+
+          <label for="bMotivo">Motivo (opcional, solo lo ves tú)</label>
+          <input type="text" id="bMotivo" maxlength="80" autocomplete="off">
+
+          <p class="error" id="errBloqueo" role="alert" hidden></p>
+          <button class="btn btn--main btn--block" type="submit" id="btnBloquear">Bloquear</button>
+        </form>
+
+        <div class="conflicto" id="avisoConflicto" role="alert" hidden></div>
+
+        <h2 class="subtitulo">Bloqueos activos</h2>
+        <div id="listaBloqueos"></div>
+      </div>
+    </section>
+
+    <!-- fotos -->
+    <section id="v-fotos" class="vista" hidden>
+      <div class="lista">
+        <form class="caja" id="formFoto" novalidate>
+          <h2>Subir una foto</h2>
+
+          <label for="fArchivo">Foto (JPG, PNG o WebP)</label>
+          <input type="file" id="fArchivo" accept="image/jpeg,image/png,image/webp">
+
+          <label for="fDesc">Descripción corta</label>
+          <input type="text" id="fDesc" maxlength="200" autocomplete="off" placeholder="Ej: Uñas largas con flores rosadas">
+          <p class="ayuda">La descripción sirve para las personas que no pueden ver la imagen. Sube solo fotos de clientas que hayan aceptado que se publiquen. La ubicación y otros datos ocultos de la foto se borran solos.</p>
+
+          <p class="error" id="errFoto" role="alert" hidden></p>
+          <button class="btn btn--main btn--block" type="submit" id="btnFoto">Subir foto</button>
+        </form>
+
+        <h2 class="subtitulo">Fotos de la galería <span class="tab__n" id="n-fotos">0</span></h2>
+        <div class="fotos" id="listaFotos"></div>
+      </div>
+    </section>
+
+    <p class="aviso" id="aviso" role="status"></p>
+
+    <nav class="bottom" aria-label="Secciones del panel">
+      <button type="button" class="bottom__btn is-active" data-vista="citas" aria-current="page">Citas <span class="bottom__n" id="n-nav" hidden>0</span></button>
+      <button type="button" class="bottom__btn" data-vista="bloqueos">Bloquear</button>
+      <button type="button" class="bottom__btn" data-vista="fotos">Fotos</button>
+    </nav>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

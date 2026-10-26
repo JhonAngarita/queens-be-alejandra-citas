@@ -1,0 +1,31 @@
+{
+  "name": "queens-be-alejandra",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Página y sistema de citas de Queens Be Alejandra Nail Salon",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:preparar": "node db/preparar.js",
+    "test": "node --test --test-concurrency=1",
+    "admin:crear": "node scripts/crearAdmin.js",
+    "fotos:importar": "node scripts/importarFotos.js",
+    "copia": "node scripts/copia.js",
+    "datos:limpiar": "node scripts/datos.js limpiar",
+    "datos:borrar": "node scripts/datos.js borrar",
+    "telegram:chat": "node scripts/telegram.js chat",
+    "telegram:probar": "node scripts/telegram.js probar"
+  },
+  "engines": {
+    "node": ">=20.10"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.23.1",
+    "sharp": "^0.35.5"
+  }
+}
